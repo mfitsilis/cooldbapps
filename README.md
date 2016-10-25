@@ -27,7 +27,7 @@ Start the app using (package.json contains all dependencies, if one is missing a
     
     node index.js
 
-The table fields(~3MB) by country has all 184 fields for every one of the 261 entries in the countries table and was generated: 
+The table fieldsbycountry(~3MB) has all 184 fields for every one of the 261 entries in the countries table and was generated: 
 
     getbyfid:{ `id xkey delete fieldid from select by fieldid,id:countryid from delete version,id from select from fb_values where fieldid=x }
     cnames::`id xkey select id, name from fb_countries
