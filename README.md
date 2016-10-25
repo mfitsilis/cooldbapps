@@ -1,4 +1,4 @@
-# cooldbapps
+# cool db apps
 source  code and data to cooldbapps.com
 
 2 instances of q are used. Instance one is readonly, allows up to 1 sec execution(somehow this doesn't seem to work?) on port 5900 and processes the queries:
