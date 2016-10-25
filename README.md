@@ -5,8 +5,9 @@ source  code and data to cooldbapps.com
  
     rlwrap ./q/ls32/q loadciafb.q -b -T 1 -p 5900
 
-Load the data with \l loadcialb.q
-Usethe following commands to restrict the executable functions by the remote user, allow up to 1000chars long queries
+Load the data with `\l loadcialb.q
+
+Use the following commands to restrict the executable functions by the remote user, allow up to 1000chars long queries
 
     allowedFns:(+;-;*;%;?;!;avg;sum;,;`id;`name;ij;xkey;=;in) / list of allowed function/ops to call (?:select,!:delete)
 	checkFn:{if[not x in allowedFns;'(-3!x)," not allowed"];}
