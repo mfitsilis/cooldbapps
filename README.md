@@ -1,7 +1,7 @@
 # cool db apps
 source  code and data to cooldbapps.com
 
-2 instances of q are used. Instance one is readonly, allows up to 1 sec execution(somehow this doesn't seem to work?) on port 5900, loads the data tables using the script loadcialb.q and processes the queries:
+2 instances of q are used. Instance one is readonly, allows up to 1 sec execution(somehow this doesn't seem to work?) on port 5900, loads the data tables using the script loadciafb.q and processes the queries:
  
     rlwrap ./q/ls32/q loadciafb.q -b -T 1 -p 5900
 
