@@ -1,0 +1,269 @@
+version;id;countryid;alias
+2014-06-24;1;1;World
+2014-06-24;2;2;Algeria
+2014-06-24;3;3;Angola
+2014-06-24;4;4;Benin
+2014-06-24;5;5;Botswana
+2014-06-24;6;6;Burkina Faso
+2014-06-24;7;7;Burundi
+2014-06-24;8;8;Cabo Verde
+2014-06-24;9;9;Cameroon
+2014-06-24;10;10;Central African Republic
+2014-06-24;11;11;Chad
+2014-06-24;12;12;Comoros
+2014-06-24;13;13;Congo, Democratic Republic of the
+2014-06-24;14;14;Congo, Republic of the
+2014-06-24;15;15;Cote d'Ivoire
+2014-06-24;16;16;Djibouti
+2014-06-24;17;17;Egypt
+2014-06-24;18;18;Equatorial Guinea
+2014-06-24;19;19;Eritrea
+2014-06-24;20;20;Ethiopia
+2014-06-24;21;21;Gabon
+2014-06-24;22;22;Gambia, The
+2014-06-24;23;23;Ghana
+2014-06-24;24;24;Guinea
+2014-06-24;25;25;Guinea-Bissau
+2014-06-24;26;26;Kenya
+2014-06-24;27;27;Lesotho
+2014-06-24;28;28;Liberia
+2014-06-24;29;29;Libya
+2014-06-24;30;30;Madagascar
+2014-06-24;31;31;Malawi
+2014-06-24;32;32;Mali
+2014-06-24;33;33;Mauritania
+2014-06-24;34;34;Mauritius
+2014-06-24;35;35;Morocco
+2014-06-24;36;36;Mozambique
+2014-06-24;37;37;Namibia
+2014-06-24;38;38;Niger
+2014-06-24;39;39;Nigeria
+2014-06-24;40;40;Rwanda
+2014-06-24;41;41;Saint Helena, Ascension, and Tristan da Cunha
+2014-06-24;42;42;Sao Tome and Principe
+2014-06-24;43;43;Senegal
+2014-06-24;44;44;Seychelles
+2014-06-24;45;45;Sierra Leone
+2014-06-24;46;46;Somalia
+2014-06-24;47;47;South Africa
+2014-06-24;48;48;South Sudan
+2014-06-24;49;49;Sudan
+2014-06-24;50;50;Swaziland
+2014-06-24;51;51;Tanzania
+2014-06-24;52;52;Togo
+2014-06-24;53;53;Tunisia
+2014-06-24;54;54;Uganda
+2014-06-24;55;55;Western Sahara
+2014-06-24;56;56;Zambia
+2014-06-24;57;57;Zimbabwe
+2014-06-24;58;58;Antarctica
+2014-06-24;59;59;Bouvet Island
+2014-06-24;60;60;French Southern and Antarctic Lands
+2014-06-24;61;61;Heard Island and McDonald Islands
+2014-06-24;62;62;American Samoa
+2014-06-24;63;63;Ashmore and Cartier Islands
+2014-06-24;64;64;Australia
+2014-06-24;65;65;Christmas Island
+2014-06-24;66;66;Cocos (Keeling) Islands
+2014-06-24;67;67;Cook Islands
+2014-06-24;68;68;Coral Sea Islands
+2014-06-24;69;69;Fiji
+2014-06-24;70;70;French Polynesia
+2014-06-24;71;71;Guam
+2014-06-24;72;72;Kiribati
+2014-06-24;73;73;Marshall Islands
+2014-06-24;74;74;Micronesia, Federated States of
+2014-06-24;75;75;Nauru
+2014-06-24;76;76;New Caledonia
+2014-06-24;77;77;New Zealand
+2014-06-24;78;78;Niue
+2014-06-24;79;79;Norfolk Island
+2014-06-24;80;80;Northern Mariana Islands
+2014-06-24;81;81;Palau
+2014-06-24;82;82;Pitcairn Islands
+2014-06-24;83;83;Samoa
+2014-06-24;84;84;Solomon Islands
+2014-06-24;85;85;Tokelau
+2014-06-24;86;86;Tonga
+2014-06-24;87;87;Tuvalu
+2014-06-24;88;88;Baker Island
+2014-06-24;89;88;Howland Island
+2014-06-24;90;88;Jarvis Island
+2014-06-24;91;88;Johnston Atoll
+2014-06-24;92;88;Kingman Reef
+2014-06-24;93;88;Midway Islands
+2014-06-24;94;88;Palmyra Atoll
+2014-06-24;95;88;United States Pacific Island Wildlife Refuges
+2014-06-24;96;89;Vanuatu
+2014-06-24;97;90;Wake Island
+2014-06-24;98;91;Wallis and Futuna
+2014-06-24;99;92;Anguilla
+2014-06-24;100;93;Antigua and Barbuda
+2014-06-24;101;94;Aruba
+2014-06-24;102;95;Bahamas, The
+2014-06-24;103;96;Barbados
+2014-06-24;104;97;Belize
+2014-06-24;105;98;British Virgin Islands
+2014-06-24;106;99;Cayman Islands
+2014-06-24;107;100;Costa Rica
+2014-06-24;108;101;Cuba
+2014-06-24;109;102;Curacao
+2014-06-24;110;103;Dominica
+2014-06-24;111;104;Dominican Republic
+2014-06-24;112;105;El Salvador
+2014-06-24;113;106;Grenada
+2014-06-24;114;107;Guatemala
+2014-06-24;115;108;Haiti
+2014-06-24;116;109;Honduras
+2014-06-24;117;110;Jamaica
+2014-06-24;118;111;Montserrat
+2014-06-24;119;112;Navassa Island
+2014-06-24;120;113;Nicaragua
+2014-06-24;121;114;Panama
+2014-06-24;122;115;Puerto Rico
+2014-06-24;123;116;Saint Barthelemy
+2014-06-24;124;117;Saint Kitts and Nevis
+2014-06-24;125;118;Saint Lucia
+2014-06-24;126;119;Saint Martin
+2014-06-24;127;120;Saint Vincent and the Grenadines
+2014-06-24;128;121;Sint Maarten
+2014-06-24;129;122;Trinidad and Tobago
+2014-06-24;130;123;Turks and Caicos Islands
+2014-06-24;131;124;Virgin Islands
+2014-06-24;132;125;Kazakhstan
+2014-06-24;133;126;Kyrgyzstan
+2014-06-24;134;127;Russia
+2014-06-24;135;128;Tajikistan
+2014-06-24;136;129;Turkmenistan
+2014-06-24;137;130;Uzbekistan
+2014-06-24;138;131;Brunei
+2014-06-24;139;132;Burma
+2014-06-24;140;133;Cambodia
+2014-06-24;141;134;China
+2014-06-24;142;135;Hong Kong
+2014-06-24;143;136;Indonesia
+2014-06-24;144;137;Japan
+2014-06-24;145;138;Korea, North
+2014-06-24;146;139;Korea, South
+2014-06-24;147;140;Laos
+2014-06-24;148;141;Macau
+2014-06-24;149;142;Malaysia
+2014-06-24;150;143;Mongolia
+2014-06-24;151;144;Papua New Guinea
+2014-06-24;152;145;Paracel Islands
+2014-06-24;153;146;Philippines
+2014-06-24;154;147;Singapore
+2014-06-24;155;148;Spratly Islands
+2014-06-24;156;149;Taiwan
+2014-06-24;157;150;Thailand
+2014-06-24;158;151;Timor-Leste
+2014-06-24;159;152;Vietnam
+2014-06-24;160;153;Akrotiri
+2014-06-24;161;154;Albania
+2014-06-24;162;155;Andorra
+2014-06-24;163;156;Austria
+2014-06-24;164;157;Belarus
+2014-06-24;165;158;Belgium
+2014-06-24;166;159;Bosnia and Herzegovina
+2014-06-24;167;160;Bulgaria
+2014-06-24;168;161;Croatia
+2014-06-24;169;162;Cyprus
+2014-06-24;170;163;Czech Republic
+2014-06-24;171;164;Denmark
+2014-06-24;172;165;Dhekelia
+2014-06-24;173;166;Estonia
+2014-06-24;174;167;European Union
+2014-06-24;175;168;Faroe Islands
+2014-06-24;176;169;Finland
+2014-06-24;177;170;France
+2014-06-24;178;171;Germany
+2014-06-24;179;172;Gibraltar
+2014-06-24;180;173;Greece
+2014-06-24;181;174;Guernsey
+2014-06-24;182;175;Holy See (Vatican City)
+2014-06-24;183;176;Hungary
+2014-06-24;184;177;Iceland
+2014-06-24;185;178;Ireland
+2014-06-24;186;179;Isle of Man
+2014-06-24;187;180;Italy
+2014-06-24;188;181;Jan Mayen
+2014-06-24;189;182;Jersey
+2014-06-24;190;183;Kosovo
+2014-06-24;191;184;Latvia
+2014-06-24;192;185;Liechtenstein
+2014-06-24;193;186;Lithuania
+2014-06-24;194;187;Luxembourg
+2014-06-24;195;188;Macedonia
+2014-06-24;196;189;Malta
+2014-06-24;197;190;Moldova
+2014-06-24;198;191;Monaco
+2014-06-24;199;192;Montenegro
+2014-06-24;200;193;Netherlands
+2014-06-24;201;194;Norway
+2014-06-24;202;195;Poland
+2014-06-24;203;196;Portugal
+2014-06-24;204;197;Romania
+2014-06-24;205;198;San Marino
+2014-06-24;206;199;Serbia
+2014-06-24;207;200;Slovakia
+2014-06-24;208;201;Slovenia
+2014-06-24;209;202;Spain
+2014-06-24;210;203;Svalbard
+2014-06-24;211;204;Sweden
+2014-06-24;212;205;Switzerland
+2014-06-24;213;206;Ukraine
+2014-06-24;214;207;United Kingdom
+2014-06-24;215;208;Armenia
+2014-06-24;216;209;Azerbaijan
+2014-06-24;217;210;Bahrain
+2014-06-24;218;211;Gaza Strip
+2014-06-24;219;212;Georgia
+2014-06-24;220;213;Iran
+2014-06-24;221;214;Iraq
+2014-06-24;222;215;Israel
+2014-06-24;223;216;Jordan
+2014-06-24;224;217;Kuwait
+2014-06-24;225;218;Lebanon
+2014-06-24;226;219;Oman
+2014-06-24;227;220;Qatar
+2014-06-24;228;221;Saudi Arabia
+2014-06-24;229;222;Syria
+2014-06-24;230;223;Turkey
+2014-06-24;231;224;United Arab Emirates
+2014-06-24;232;225;West Bank
+2014-06-24;233;226;Yemen
+2014-06-24;234;227;Bermuda
+2014-06-24;235;228;Canada
+2014-06-24;236;229;Clipperton Island
+2014-06-24;237;230;Greenland
+2014-06-24;238;231;Mexico
+2014-06-24;239;232;Saint Pierre and Miquelon
+2014-06-24;240;233;United States
+2014-06-24;241;234;Argentina
+2014-06-24;242;235;Bolivia
+2014-06-24;243;236;Brazil
+2014-06-24;244;237;Chile
+2014-06-24;245;238;Colombia
+2014-06-24;246;239;Ecuador
+2014-06-24;247;240;Falkland Islands (Islas Malvinas)
+2014-06-24;248;241;Guyana
+2014-06-24;249;242;Paraguay
+2014-06-24;250;243;Peru
+2014-06-24;251;244;South Georgia and South Sandwich Islands
+2014-06-24;252;245;Suriname
+2014-06-24;253;246;Uruguay
+2014-06-24;254;247;Venezuela
+2014-06-24;255;248;Afghanistan
+2014-06-24;256;249;Bangladesh
+2014-06-24;257;250;Bhutan
+2014-06-24;258;251;British Indian Ocean Territory
+2014-06-24;259;252;India
+2014-06-24;260;253;Maldives
+2014-06-24;261;254;Nepal
+2014-06-24;262;255;Pakistan
+2014-06-24;263;256;Sri Lanka
+2014-06-24;264;257;Arctic Ocean
+2014-06-24;265;258;Atlantic Ocean
+2014-06-24;266;259;Indian Ocean
+2014-06-24;267;260;Pacific Ocean
+2014-06-24;268;261;Southern Ocean
