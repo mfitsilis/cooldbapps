@@ -123,17 +123,21 @@
 	<hr>
 	<h1>World Fact Book</h1>
 	<hr>
-	<p>Query the fact book database. Basic syntax is: <i><b>Select columnname,... from tablename where columnname=...</i></b></p>
+	<p>Query the fact book database. You're accessing the database(kdb+) directly with a few restrictions. Feel free to play.<br>
+	Basic syntax is: <i><b>Select columnname,... from tablename where columnname=...</i></b><br>
+	You can even type a simple calculation at the q) prompt like: 1+2%3*(1+7)-12 but remember that there is no operator precedence and calculation starts from the right!</p>
 	<p>In this more advanced example a lambda function can be included in the syntax to show a 1(0) if the country's name has(not) more than 5 letters.</p>
-	<p>Or try the following that gives the lowest and highest point by country(field id=14):</p><i><b>select name, lo_hi:values from ((`id xkey select id:countryid, values from fb_values where fieldid=14,countryid in (exec id from fb_countries where name in exec name from fb_countries)) ij `id xkey select id, name from fb_countries)</b></i>. Apply <i><b>select from fb_fields</i></b> to see the different fields ids. More content coming soon.
+	<p>Or try the following that gives the lowest and highest point by country(field id=14):<br><i><b>select name, lo_hi:values from ((`id xkey select id:countryid, values from fb_values where fieldid=14,countryid in (exec id from fb_countries where name in exec name from fb_countries)) ij `id xkey select id, name from fb_countries)</b></i>.</p>
 
 	 <form id="frm1" action="">
 	  <!--input type="text" size="150" id="qry" placeholder="select from fb_countries"-->
-	  <textarea id="qry" style="background-color:#ccf;" spellcheck="false" rows=2 cols=120 placeholder="select from fb_countries"></textarea>
+	  <h1 style="display: inline;">q)</h1><textarea id="qry" style="background-color:#ccf;" spellcheck="false" rows=2 cols=110 placeholder="select from fb_countries"></textarea>
 	  <input type="submit" value="send" >
 	  <textarea id="out" style="background-color:#ccf; white-space: pre; overflow: scroll; overflow-y: scroll; overflow-x: scroll;" spellcheck="false" rows=25 cols=130></textarea>
 	 </form>
 	 <br>
+	 Apply <i><b>select from fb_fields</i></b> to see the different field ids(in total 183).
+	 
 	<br>
 	<p>The following tables are available:</p>
 	<table class="table table-bordered table-hover table-condensed" style="font-family: sans-serif;font-size:12px;font-style:italic;">
@@ -222,7 +226,7 @@
 		 <p>This website, currently a work in progress, will host a few web apps using node.js and kdb+ as as database. Kdb+ is usually 
 		 used as a tick data store for big market data databases on which queries can be run, but it can also find use as a
 		 general purpose embedded db, as seen here, because of its small size(~400KB).</p>
-		 <p>Node.js makes it possible to use js on the server and can communicate with kdb+ using node-q and websockets. Source code and data are on <a href="https://github.com/mfitsilis/cooldbapps">github</>.</p>
+		 <p>Node.js makes it possible to use js on the server and can communicate with kdb+ using node-q and websockets. Source code and data are on <a href="https://github.com/mfitsilis/cooldbapps">github</a>.</p>
 	</div>
 	
 	<div id="links" style="background-color: #ccf; padding-top:50px; padding-left:200px; height: 1000px; min-width: 500px">       
@@ -254,7 +258,9 @@
    <input disabled maxlength="3" size="3" value="256" id="counter"> <h5 id="sentflg" style="background-color:#ccf; display: inline; color:green; visibility: hidden;"> sent</h5><br>
 	or email at <a href="mailto:mfitsilis@outlook.com" style="display: inline;">@</a>.
 	</div>
-   
+	<div style="text-align: center;">
+    <p style="display: inline;"><i>last updated:</i></p><p style="display: inline;" id="lastmod">test</p>
+    </div>
 <script>
 function textCounter(field,field2,maxlimit)
 {
@@ -305,6 +311,11 @@ function textCounter(field,field2,maxlimit)
      
      })();
 
+	function showlastmod() {
+		var x = document.lastModified;
+		document.getElementById("lastmod").innerHTML = x;
+	}
+	showlastmod();
 </script>
 	
     </body>
