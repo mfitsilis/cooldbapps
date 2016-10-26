@@ -125,7 +125,7 @@
 	<hr>
 	<p>Query the fact book database. Basic syntax is: <i><b>Select columnname,... from tablename where columnname=...</i></b></p>
 	<p>In this more advanced example a lambda function can be included in the syntax to show a 1(0) if the country's name has(not) more than 5 letters.</p>
-	<p>Or try the following that gives the lowest and highest point by country</p><i><b>select name, lo_hi:values from ((`id xkey select id:countryid, values from fb_values where fieldid=14,countryid in (exec id from fb_countries where name in exec name from fb_countries)) ij `id xkey select id, name from fb_countries)</b></i>. More content coming soon.
+	<p>Or try the following that gives the lowest and highest point by country(field id=14):</p><i><b>select name, lo_hi:values from ((`id xkey select id:countryid, values from fb_values where fieldid=14,countryid in (exec id from fb_countries where name in exec name from fb_countries)) ij `id xkey select id, name from fb_countries)</b></i>. Apply <i><b>select from fb_fields</i></b> to see the different fields ids. More content coming soon.
 
 	 <form id="frm1" action="">
 	  <!--input type="text" size="150" id="qry" placeholder="select from fb_countries"-->
@@ -213,9 +213,8 @@
 	<td>`version`id</td>
 	</tr>
 	</tbody></table>
-
 	</div>
-    
+	
     <div id="about"> 
 		 <hr>
 		 <h1>About</h1>
