@@ -25,8 +25,8 @@ Initialize the message table and use a timer to backup every night:
     
 Start the app using (package.json contains all dependencies, if one is missing add it using npm install):
     
-    node index.js
-
+    npm start or node index.js
+    
 The table fieldsbycountry(~3MB) has all 183 fields for every one of the 261 entries in the countries table and was generated: 
 
     getbyfid:{ `id xkey delete fieldid from select by fieldid,id:countryid from delete version,id from select from fb_values where fieldid=x }

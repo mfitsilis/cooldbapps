@@ -1,11 +1,12 @@
 {
-  "name": "my web app",
+  "name": "cooldbapps",
   "version": "0.0.1",
   "description": "a web app",
   "dependencies": {
     "express": "4.10.2",
     "socket.io": "1.2.0",
 	"serve-favicon": "2.3.0",
-	"node-q", "1.1.1"
-  }
+	"node-q": "1.1.1"
+  },
+  "scripts": { "start" : "node index.js" }
 }
