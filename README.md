@@ -18,7 +18,7 @@ Start the other that will be receiving the messages on port 5901:
     
 Initialize the message table and use a timer to backup every night:
     
-    msg:([]time:();email:();text:())
+    msg:`time xkey ([]time:();email:();text:())
     exists:{x in key`.}
     .z.ts:{ $[1=exists `today;if[.z.D<=today;mes:(get `:msg);mes,:msg;if[(count mes)<=count msg;msg::mes;save `msg] ] ;today::.z.D;]; }
     \t 300000
