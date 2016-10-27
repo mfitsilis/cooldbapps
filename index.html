@@ -137,18 +137,27 @@
 	 </form>
 	 <br>
 	 Apply <i><b><a onclick="return sendquery(3);">select from fb_fields</a></i></b> to see the different field ids(in total 183).<br>
-	 The table fieldsbycountry(~3.3MB) was created to contain every available field for every country. It has 261 rows and 185 columns and contains pretty much everything from those 3 tables. It was created by left joining 184 tables using the formula <i>(lj) over {...} each 2+til 183</i>. For more details check the description in github.<br>
-	 Apply <b><i><a onclick="return sendquery(4);">select name,c2,... from fieldsbycountry</a></i></b> from (c2...c184) to access any of the available fields.<br>
+	 The table fieldsbycountry(~3.3MB) was created to contain every available field for every country. It has 261 rows and 185 columns and contains pretty much everything from those 3 tables. It was created by left joining 184 tables using the formula <i>(lj) over {...} each 2+til 183</i>.<br>
+	 The same can be done to create a table with the countries on the x-axis and the fields on the y-axis but it is easier to do so by flipping the previously generated table and applying a few more operations. The table <b><i><a onclick="return sendquery(5);">databyfield</a></i></b> can be accessed to query all data for a specific country(note: the country name must not contain any gaps, commas or parentheses). For more details check the description in github.<br>
+	 Or you can apply <b><i><a onclick="return sendquery(4);">select name,c2,... from fieldsbycountry</a></i></b> from (c2...c184) to access any one of the available fields for all countries.<br>
 	 So there you have it, the entire cia fact book in one table. Beautification and charting will be added at some point.
 	 
 	<br>
 	<p>The following tables are available:</p>
-	<table class="table table-bordered table-hover table-condensed" style="font-family: sans-serif;font-size:12px;font-style:italic;">
-	<tbody><tr><th>tablename</th>
-	<th>bytes</th>
-	<th>rows</th>
-	<th>fieldnames</th>
-	</tr>
+	<!--table id="tab1" class="table table-bordered table-hover table-condensed" style="font-family: sans-serif;font-size:12px;font-style:italic;"-->
+	<!--table id="tab1" class="display nowrap" cellspacing="0" width="100%"-->
+	<div id="test">
+	</div>
+	<table id="example" class="display nowrap" cellspacing="0" width="100%"><table id="example" class="display nowrap" cellspacing="0" width="100%">
+	<tbody>
+		<thead>
+		<tr>
+		<th>tablename</th>
+		<th>bytes</th>
+		<th>rows</th>
+		<th>fieldnames</th>
+		</tr>
+		</thead>
 	<tr><td>fb_appendices</td>
 	<td>394</td>
 	<td>7</td>
@@ -219,7 +228,8 @@
 	<td>1</td>
 	<td>`version`id</td>
 	</tr>
-	</tbody></table>
+	</tbody>
+	</table>	
 	</div>
 	
     <div id="about"> 
@@ -280,21 +290,24 @@ function textCounter(field,field2,maxlimit)
 <!-- end of body -->   
     <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <!--script src="http://code.jquery.com/jquery-1.11.1.js"></script-->
+    <script src="http://code.jquery.com/jquery-1.12.3.js"></script>
+	<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 	<script type="text/javascript">
       function sendquery(id){
 		var str=["1+2%3*(1+7)-12",
 		"select id, regionid, xmlid, name, name_len_gt5:{ 5<count each ($)x } name from fb_countries",
 		"select name, lo_hi:values from ((`id xkey select id:countryid, values from fb_values where fieldid=14,countryid in (exec id from fb_countries where name in exec name from fb_countries)) ij `id xkey select id, name from fb_countries)",
 		"select from fb_fields",
-		"select name,c2 from fieldsbycountry"];
+		"select name,c2 from fieldsbycountry",
+		"select fields_countries,NewZealand from databyfield"];
 		document.getElementById("qry").value=str[id];
 		socket.emit('query', $('#qry').val());
 		return true;
 	  }
 	  
 	  var socket = io();
-	  document.getElementById("qry").value="select id, regionid, xmlid, name, name_len_gt5:{ 5<count each ($)x } name from fb_countries";
+	  document.getElementById("qry").value="select fields_countries,NewZealand from databyfield";
 	  
 	  socket.emit('query', $('#qry').val());
       $('form#frm1').submit(function(){
@@ -331,7 +344,157 @@ function textCounter(field,field2,maxlimit)
 		document.getElementById("lastmod").innerHTML = x;
 	}
 	showlastmod();
-</script>
+
 	
+	//http://stackoverflow.com/questions/1051061/convert-json-array-to-an-html-table-in-jquery#10301494
+	$.makeTable = function (mydata) {
+    var table = $('<table border=1>');
+    var tblHeader = "<tr>";
+    for (var k in mydata[0]) tblHeader += "<th>" + k + "</th>";
+    tblHeader += "</tr>";
+    $(tblHeader).appendTo(table);
+    $.each(mydata, function (index, value) {
+        var TableRow = "<tr>";
+        $.each(value, function (key, val) {
+            TableRow += "<td>" + val + "</td>";
+        });
+        TableRow += "</tr>";
+        $(table).append(TableRow);
+    });
+    return ($(table));
+	};
+	
+	var tab=[
+ {
+   "version": "2014-06-24",
+   "id": 1,
+   "shortid": "wr",
+   "longid": "wrl",
+   "name": "Oceans",
+   "FIELD6": ""
+ },
+ {
+   "version": "2014-06-24",
+   "id": 2,
+   "shortid": "afr",
+   "longid": "afr",
+   "name": "Africa",
+   "FIELD6": ""
+ },
+ {
+   "version": "2014-06-24",
+   "id": 3,
+   "shortid": "ant",
+   "longid": "ant",
+   "name": "Antarctica",
+   "FIELD6": ""
+ },
+ {
+   "version": "2014-06-24",
+   "id": 4,
+   "shortid": "aus",
+   "longid": "aus",
+   "name": "Australia-Oceania",
+   "FIELD6": ""
+ },
+ {
+   "version": "2014-06-24",
+   "id": 5,
+   "shortid": "cam",
+   "longid": "cam",
+   "name": "Central America and Caribbean",
+   "FIELD6": ""
+ },
+ {
+   "version": "2014-06-24",
+   "id": 6,
+   "shortid": "cas",
+   "longid": "cas",
+   "name": "Central Asia",
+   "FIELD6": ""
+ },
+ {
+   "version": "2014-06-24",
+   "id": 7,
+   "shortid": "eas",
+   "longid": "eas",
+   "name": "East &amp",
+   "FIELD6": " Southeast Asia"
+ },
+ {
+   "version": "2014-06-24",
+   "id": 8,
+   "shortid": "eur",
+   "longid": "eur",
+   "name": "Europe",
+   "FIELD6": ""
+ },
+ {
+   "version": "2014-06-24",
+   "id": 9,
+   "shortid": "mde",
+   "longid": "mde",
+   "name": "Middle East",
+   "FIELD6": ""
+ },
+ {
+   "version": "2014-06-24",
+   "id": 10,
+   "shortid": "noa",
+   "longid": "noa",
+   "name": "North America",
+   "FIELD6": ""
+ },
+ {
+   "version": "2014-06-24",
+   "id": 11,
+   "shortid": "soa",
+   "longid": "soa",
+   "name": "South America",
+   "FIELD6": ""
+ },
+ {
+   "version": "2014-06-24",
+   "id": 12,
+   "shortid": "sas",
+   "longid": "sas",
+   "name": "South Asia",
+   "FIELD6": ""
+ },
+ {
+   "version": "2014-06-24",
+   "id": 13,
+   "shortid": "oc",
+   "longid": "oce",
+   "name": "Oceans",
+   "FIELD6": ""
+ }
+];
+	//var dat=$.getJSON("tab1.json", function(json) {
+  //  console.log(json); // this will show the info it in firebug console
+//	});
+//	console.log(json)
+	
+	
+	$(document).ready(function() {
+    $('example').DataTable( {
+        "scrollY": 200,
+        "scrollX": true
+    } );
+/*    var mydata = eval(tab);
+	var table = $.makeTable(mydata);
+	$(table).appendTo("#test");
+	$('test').DataTable( 
+		"ajax": {  dataSrc: function(tab) { var parsedData = JSON.parse(tab); return parsedData.data } },
+        "scrollY": 200,
+        "scrollX": true
+		);
+*/
+
+
+	} );
+	
+</script>
+
     </body>
 </html>

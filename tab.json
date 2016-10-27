@@ -1,0 +1,106 @@
+[
+ {
+   "version": "2014-06-24",
+   "id": 1,
+   "shortid": "wr",
+   "longid": "wrl",
+   "name": "Oceans",
+   "FIELD6": ""
+ },
+ {
+   "version": "2014-06-24",
+   "id": 2,
+   "shortid": "afr",
+   "longid": "afr",
+   "name": "Africa",
+   "FIELD6": ""
+ },
+ {
+   "version": "2014-06-24",
+   "id": 3,
+   "shortid": "ant",
+   "longid": "ant",
+   "name": "Antarctica",
+   "FIELD6": ""
+ },
+ {
+   "version": "2014-06-24",
+   "id": 4,
+   "shortid": "aus",
+   "longid": "aus",
+   "name": "Australia-Oceania",
+   "FIELD6": ""
+ },
+ {
+   "version": "2014-06-24",
+   "id": 5,
+   "shortid": "cam",
+   "longid": "cam",
+   "name": "Central America and Caribbean",
+   "FIELD6": ""
+ },
+ {
+   "version": "2014-06-24",
+   "id": 6,
+   "shortid": "cas",
+   "longid": "cas",
+   "name": "Central Asia",
+   "FIELD6": ""
+ },
+ {
+   "version": "2014-06-24",
+   "id": 7,
+   "shortid": "eas",
+   "longid": "eas",
+   "name": "East &amp",
+   "FIELD6": " Southeast Asia"
+ },
+ {
+   "version": "2014-06-24",
+   "id": 8,
+   "shortid": "eur",
+   "longid": "eur",
+   "name": "Europe",
+   "FIELD6": ""
+ },
+ {
+   "version": "2014-06-24",
+   "id": 9,
+   "shortid": "mde",
+   "longid": "mde",
+   "name": "Middle East",
+   "FIELD6": ""
+ },
+ {
+   "version": "2014-06-24",
+   "id": 10,
+   "shortid": "noa",
+   "longid": "noa",
+   "name": "North America",
+   "FIELD6": ""
+ },
+ {
+   "version": "2014-06-24",
+   "id": 11,
+   "shortid": "soa",
+   "longid": "soa",
+   "name": "South America",
+   "FIELD6": ""
+ },
+ {
+   "version": "2014-06-24",
+   "id": 12,
+   "shortid": "sas",
+   "longid": "sas",
+   "name": "South Asia",
+   "FIELD6": ""
+ },
+ {
+   "version": "2014-06-24",
+   "id": 13,
+   "shortid": "oc",
+   "longid": "oce",
+   "name": "Oceans",
+   "FIELD6": ""
+ }
+]
