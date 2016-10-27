@@ -125,20 +125,20 @@
 	<hr>
 	<p>Query the fact book database. You're accessing the database(kdb+) directly with a few restrictions. Feel free to play.<br>
 	Basic syntax is: <i><b>Select columnname,... from tablename where columnname=...</i></b><br>
-	You can even type a simple calculation at the q) prompt like: <i><b><a onclick="return sendquery(0);">1+2%3*(1+7)-12</a></i></b> but remember that there is no operator precedence and calculation starts from the right!</p>
-	<p>In <i><b><a onclick="return sendquery(1);">this</a></i></b> more advanced example a lambda function can be included in the syntax to show a 1(0) if the country's name has(not) more than 5 letters.</p>
-	<p>Or try this one that gives the lowest and highest point by country(field id=14):<br><i><b><a onclick="return sendquery(2);">select name, lo_hi:values from ((`id xkey select id:countryid, values from fb_values where fieldid=14,countryid in (exec id from fb_countries where name in exec name from fb_countries)) ij `id xkey select id, name from fb_countries)</a></b></i>.</p>
+	You can even type a simple calculation at the q) prompt like: <i><b><a onclick="return sendquery(0);" style="color:blue;">1+2%3*(1+7)-12</a></i></b> but remember that there is no operator precedence and calculation starts from the right!</p>
+	<p>In this more advanced example a lambda function can be included in the syntax to show a 1(0) if the country's name has(not) more than 5 letters.</p>
+	<p>Or try the <i><b><a onclick="return sendquery(1);" style="color:blue;">this one</a></i></b> that gives the lowest and highest point by country(field id=14):<br><i><b><a onclick="return sendquery(2);" style="color:blue;">select name, lo_hi:values from ((`id xkey select id:countryid, values from fb_values where fieldid=14,countryid in (exec id from fb_countries where name in exec name from fb_countries)) ij `id xkey select id, name from fb_countries)</a></b></i>.</p>
 
 	 <form id="frm1" action="">
 	  <!--input type="text" size="150" id="qry" placeholder="select from fb_countries"-->
 	  <h1 style="display: inline;">q)</h1><textarea id="qry" style="background-color:#ccf;" spellcheck="false" rows=2 cols=110 placeholder="select from fb_countries"></textarea>
 	  <input type="submit" value="send" >
-	  <textarea id="out" style="font-family:monospace; background-color:#ccf; white-space: pre; overflow: scroll; overflow-y: scroll; overflow-x: scroll;" spellcheck="false" rows=25 cols=130></textarea>
+	  <textarea id="out" style="background-color:#ccf; white-space: pre; overflow: scroll; overflow-y: scroll; overflow-x: scroll;" spellcheck="false" rows=25 cols=130></textarea>
 	 </form>
 	 <br>
-	 Apply <i><b><a onclick="return sendquery(3);">select from fb_fields</a></i></b> to see the different field ids(in total 183).<br>
+	 Apply <i><b><a onclick="return sendquery(3);" style="color:blue;">select from fb_fields</a></i></b> to see the different field ids(in total 183).<br>
 	 The table fieldsbycountry(~3.3MB) was created to contain every available field for every country. It has 261 rows and 185 columns and contains pretty much everything from those 3 tables. It was created by left joining 184 tables using the formula <i>(lj) over {} each 2+til 183</i>. For more details check the description in github.<br>
-	 Apply <b><i><a onclick="return sendquery(4);">select name,c2,... from fieldsbycountry</a></i></b> from (c2...c184) to access any of the available fields.<br>
+	 Apply <b><i><a onclick="return sendquery(4);" style="color:blue;">select name,c2,... from fieldsbycountry</a></i></b> from (c2...c184) to access any of the available fields.<br>
 	 So there you have it, the entire cia fact book in one table. Beautification and charting will be added at some point.
 	 
 	<br>
