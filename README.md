@@ -41,6 +41,6 @@ To create the table databyfield, fieldsbycountry must be flipped(like a pivot) a
 
     dfld:(exec name from fb_fields)!1_value flip fieldsbycountry
     dff:(key dfld) ,' value dfld
-    ctr:{ ssr[x;"[,- ()'-]";""] } each ($) exec name from fb_countries
+    ctr:`${ ssr[x;"[,- ()'-]";""] } each ($) exec name from fb_countries
     databyfield:flip (`fields_countries,ctr)!flip 1_dff
 
