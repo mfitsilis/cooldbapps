@@ -29,14 +29,15 @@ io.on('connection', function(socket){  //conn.k is async?
 
 	var sessionid=socket.id;
 	//qparse:{$[exit in parse x;; .Q.s eval parse x]} /define in q
-	conn.k(msg.substr(0,300), function(err, res) {
+	conn.k(".j.j "+msg.substr(0,300), function(err, res) {
 	var ret;
 	console.log(msg);
 	
 	if (err) { /*console.log("bad query");*/ ret="bad query"; } else { result=res; } 
 	 if(ret=="bad query") result=ret;
-		try{
-		  result=result.toString().replace(/null/g," ").replace(/<.*?>/g," "); //replace null,<...> and <.../>
+		try{ //replace null values in the json
+		  result=result.toString().replace(/:null,/g,":0,").replace(/:null}/g,":0}").replace(/null/g," ").replace(/<.*?>/g," "); //replace null,<...> and <.../>
+		//  console.log(result);
 		 // console.log("result:"+result);
 		  io.to(sessionid).emit('query', result);
 		} catch(eee) {} //console.log may crash?	

@@ -5,12 +5,12 @@ source  code and data to cooldbapps.com
  
     rlwrap ./q/ls32/q loadciafb.q -b -T 1 -p 5900
 
-Use the following commands to restrict the executable functions by the remote user, allow up to 1000chars long queries
+Use the following commands to restrict the executable functions by the remote user, allow up to 300000 character long replies:
 
-    allowedFns:(+;-;*;%;?;!;avg;sum;,;`id;`name;ij;xkey;=;in) / list of allowed function/ops to call (?:select,!:delete)
+    allowedFns:(+;-;*;%;?;!;avg;sum;,;`id;`name;ij;xkey;=;in;`.j.j) / list of allowed function/ops to call (?:select,!:delete)
 	checkFn:{if[not x in allowedFns;'(-3!x)," not allowed"];}
 	validatePT:{if[0h=t:type x;if[(not 0h=type first x)&1=count first x;checkFn first x;];.z.s each x where 0h=type each x;];}
-	.z.pg:{if[10h=type x;$[exit in parse x;;[x:parse x;validatePT x; : .Q.s $[1000<count eval x;1000#eval x;eval x] ]]] }
+	.z.pg:{if[10h=type x;$[exit in parse x;;[x:parse x;validatePT x; : .Q.s $[300000<count eval x;300000#eval x;eval x] ]]] }
 
 Start the other that will be receiving the messages on port 5901:
 
