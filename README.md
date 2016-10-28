@@ -35,7 +35,7 @@ The table fieldsbycountry(~3MB) has all 183 fields for every one of the 261 entr
     gfid:{ (fnam x) xcol cnames ij getbyfid y}
     fieldsbycountry:0!(`id`name,1_fb_fields[`name]) xcol delete countryid from (lj) over {gfid[x;x]} each 2+til 183
     
-(lj) over {} each 2+til 183 conveniently left joins all available fields to the countries list.
+(lj) over {...} each 2+til 183 conveniently left joins all available fields to the countries list.
 
 To create the table databyfield, fieldsbycountry must be flipped(like a pivot) and the country names must be added as a header after any gaps or other symbol like ,()-' have been removed:
 
