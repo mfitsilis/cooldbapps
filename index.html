@@ -138,7 +138,7 @@
 	 <br>
 	 Apply <i><b><a onclick="return sendquery(3);">select from fb_fields</a></i></b> to see the different field ids(in total 183).<br>
 	 The table fieldsbycountry(~3.3MB) was created to contain every available field for every country. It has 261 rows and 185 columns and contains pretty much everything from those 3 tables. It was created by left joining 184 tables using the formula <i>(lj) over {...} each 2+til 183</i>.<br>
-	 The same can be done to create a table with the countries on the x-axis and the fields on the y-axis but it is easier to do so by flipping the previously generated table and applying a few more operations. The table <b><i><a onclick="return sendquery(5);">databyfield</a></i></b> can be accessed to query all data for a specific country(note: the country name must not contain any gaps, commas or parentheses). For more details check the description in github.<br>
+	 The same can be done to create a table with the countries on the x-axis and the fields on the y-axis but it is easier to do so by flipping the previously generated table and applying a few more operations. The resulting table <b><i><a onclick="return sendquery(5);">databyfield</a></i></b> can be accessed to query all data for a specific country(note: the country name must not contain any gaps, commas or parentheses). For more details check the description in github.<br>
 	 Or you can apply <b><i><a onclick="return sendquery(4);">select name,c2,... from fieldsbycountry</a></i></b> from (c2...c184) to access any one of the available fields for all countries.<br>
 	 So there you have it, the entire cia fact book in one table. Beautification and charting will be added at some point.
 	 
@@ -300,14 +300,14 @@ function textCounter(field,field2,maxlimit)
 		"select name, lo_hi:values from ((`id xkey select id:countryid, values from fb_values where fieldid=14,countryid in (exec id from fb_countries where name in exec name from fb_countries)) ij `id xkey select id, name from fb_countries)",
 		"select from fb_fields",
 		"select name,c2 from fieldsbycountry",
-		"select fields_countries,NewZealand from databyfield"];
+		'select id:`$("c" ,\')($)i+2, fields_countries,Comoros from databyfield'];
 		document.getElementById("qry").value=str[id];
 		socket.emit('query', $('#qry').val());
 		return true;
 	  }
 	  
 	  var socket = io();
-	  document.getElementById("qry").value="select fields_countries,NewZealand from databyfield";
+	  document.getElementById("qry").value='select id:`$("c" ,\')($)i+2, fields_countries,Comoros from databyfield';
 	  
 	  socket.emit('query', $('#qry').val());
       $('form#frm1').submit(function(){

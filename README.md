@@ -37,11 +37,11 @@ The table fieldsbycountry(~3MB) has all 183 fields for every one of the 261 entr
     
 (lj) over {} each 2+til 183 conveniently left joins all available fields to the countries list.
 
-To create the table databyfield, fieldsbycountry must be flipped(like a pivot) and the country names must be added as a header after any gaps, commas or parentheses have been removed:
+To create the table databyfield, fieldsbycountry must be flipped(like a pivot) and the country names must be added as a header after any gaps or other symbol like ,()-' have been removed:
 
     dfld:(exec name from fb_fields)!1_value flip fieldsbycountry
     dff:(key dfld) ,' value dfld
     ctr:exec name from fb_countries
-    ctr:`$ { ssr[x;" ";""] } each { ssr[x;",";""] } each { ssr[x;"(";""] } each { ssr[x;")";""] } each ($) ctr
+    ctr:`$ { ssr[x;"'";""] } each { ssr[x;"-";""] } each { ssr[x;" ";""] } each { ssr[x;",";""] } each { ssr[x;"(";""] } each { ssr[x;")";""] } each ($) ctr
     databyfield:flip (`fields_countries,ctr)!flip 1_dff
 
