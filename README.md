@@ -10,7 +10,7 @@ Use the following commands to restrict the executable functions by the remote us
     allowedFns:(+;-;*;%;?;!;avg;sum;,;`id;`name;ij;xkey;=;in;`.j.j) / list of allowed function/ops to call (?:select,!:delete)
 	checkFn:{if[not x in allowedFns;'(-3!x)," not allowed"];}
 	validatePT:{if[0h=t:type x;if[(not 0h=type first x)&1=count first x;checkFn first x;];.z.s each x where 0h=type each x;];}
-	.z.pg:{if[10h=type x;$[exit in parse x;;[x:parse x;validatePT x; : .Q.s $[300000<count eval x;300000#eval x;eval x] ]]] }
+	.z.pg:{if[10h=type x;$[exit in parse x;;[x:parse x;validatePT x; : $[300000<count eval x;300000#eval x;eval x] ]]] }
 
 Start the other that will be receiving the messages on port 5901:
 
